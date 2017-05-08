@@ -1,26 +1,25 @@
 {
-  "name": "kindConsultation",
-  "plural": "kindConsultations",
+  "name": "appointment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
-      "type": "string",
+    "time": {
+      "type": "date",
       "required": true
     },
-    "time": {
-      "type": "number",
+    "clientName": {
+      "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "appointment": {
-      "type": "hasMany",
-      "model": "appointment"
+    "kindConsultation": {
+      "type": "hasOne",
+      "model": "kindConsultation"
     }
   },
   "acls": [],
